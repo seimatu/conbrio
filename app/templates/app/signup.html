@@ -1,0 +1,27 @@
+{% extends "app/base.html" %}
+{% block content %}
+
+<div class="container-login">
+    <div class="row">
+            <div class="col-sm-6 col-md-12 col-lg-12">
+
+<h3>ユーザー登録</h3>
+<form method="POST" action="{%url 'app:signup' %}" style=" color: rgb(167, 133, 110); ">{% csrf_token %}
+    <label>meiladdress</label>
+    {{form.email}}
+    {{form.email.errors}}
+    <br>
+    <label>password</label>
+    {{form.password1}}
+    {{form.password1.errors}}
+    <br>
+    <label>password(確認用)</label>
+    {{form.password2}}
+    {{form.password2.errors}}
+    <br>
+    <input style=" color: rgb(167, 133, 110);" type="submit" value="登録する">
+    
+
+</form>
+  
+{% endblock %}

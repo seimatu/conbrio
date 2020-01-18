@@ -1,0 +1,42 @@
+{% extends "app/base.html" %}
+{% block content %}
+  
+<div class="container-login">
+    <div class="row">
+            <div class="col-sm-6 col-md-12 col-lg-12">
+        <form class="form-sigin" method="POST">{% csrf_token %}
+
+
+    <!-- <h2>login</h2>
+    <label>メールアドレス</label>
+    <input name="username">
+    <br>
+    <label>password</label>
+    <input type="password" name="password">
+    <br>
+    <input type="submit" value="ログイン"> -->
+
+    <!-- <h6 style="font-size:20px;">メールアドレスとパスワードを入力してください。</h6>
+    <label style="color:rgb(167, 133, 110);">mailaddress:</label>
+    <input name="username">
+    <br>
+    <label style="color:rgb(167, 133, 110);">password   :  </label>
+    <input type="password" name="password">
+    <br> -->
+
+    <h6>こちらからログインお願いします。</h6>
+
+
+
+    <div class="container-login">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-4"></div>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+        <p style="color:rgb(167, 133, 110);"> {{form}}</p>
+    <input type="submit" style="color: white; background-color:rgb(167, 133, 110);" value="ログイン">
+</div>
+</div>
+</div>
+</form>
+
+{% endblock %}

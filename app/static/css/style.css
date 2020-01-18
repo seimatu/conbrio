@@ -1,0 +1,176 @@
+.date{
+    font-family: 'Great Vibes', cursive;
+}
+.frends{
+    font-family: 'Permanent Marker', cursive;
+}
+.active{
+    font-family: 'Abril Fatface', cursive;
+}
+.relax{
+    font-family: 'Kaushan Script', cursive;
+}
+/* .body{
+    font-family: 'M PLUS 1p', sans-serif;
+} */
+
+.card-title{
+    font-size: 40px;
+    color: white;
+}
+.card-text{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px rgb(167, 133, 110);
+}
+
+h1{
+    float: left;
+    color: rgb(167, 133, 110);
+    padding-top: 20px;
+    padding-left: 110px;
+    z-index: 4;
+    font-size: 50px;
+}
+h5{
+    color: rgb(167, 133, 110);
+    font-size: 30px;
+}
+
+.login{
+    float: left;
+    padding-top: 50px;
+    margin-left: 30px;
+    color: rgb(167, 133, 110);
+}
+
+.icon{
+    float: left;
+    margin-left: 600px;
+    padding-top: 30px;
+}
+
+.nav-item{
+    padding-top: 30px;
+    color: rgb(167, 133, 110);
+}
+
+i{
+    font-size: 30px;
+    color: rgb(167, 133, 110);
+    padding: 20px 40px 20px 40px;
+    
+}
+
+h2 {
+    text-align: center; 
+    margin:40px 0px 30px 0px; 
+    color: rgb(167, 133, 110);
+    padding: 0.2em 0;/*上下の余白*/
+    border-top: dotted 5px rgb(167, 133, 110);/*上線*/
+    border-bottom: dotted 5px rgb(167, 133, 110);/*下線*/
+    font-size: 60px;
+  }
+
+.row{
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.col{
+    text-align: center;
+    margin: auto;
+}
+
+.category{
+    margin-top: 50px;
+}
+
+.sarch-plece{
+    text-align: center;
+    display: inline-block;
+    height: 0px;
+    width:20px;
+    margin-right: 90px;
+}
+
+.sarch{
+    text-align: center;
+    display: inline-block;
+    height: 0px;
+    width:10px;
+    margin-right: 220px;
+}
+.search-title{
+    text-align: center; 
+    margin:10px 0px 40px 0px; 
+    color: rgb(167, 133, 110);
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: dotted 5px rgb(167, 133, 110);/*上線*/
+    border-bottom: dotted 5px rgb(167, 133, 110);/*下線*/
+    font-size: 40px;
+  }
+
+
+.card-body{
+    margin: auto;
+    font-size: 30px;
+}
+
+.touch-buttan{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.container-sarch{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.card-city{
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+label{
+    margin-left: 20px;
+}
+
+.card-text-category{
+    display: inline-block;
+    color: white;
+    -webkit-text-stroke: 1px rgb(167, 133, 110);
+    font-size: 30px;
+    text-align: center;
+    padding-left: 70px;
+}
+h6{
+    text-align: center; 
+    color: rgb(167, 133, 110);
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: dotted 5px rgb(167, 133, 110);/*下線*/
+    font-size: 40px;
+  }
+.category{
+    margin-bottom: 100px;
+}
+
+
+h4 {
+    text-align: center;
+    color: rgb(167, 133, 110);
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+h3{
+    display: inline-block;
+    text-align: center;
+    color: rgb(167, 133, 110);
+    position: relative;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
