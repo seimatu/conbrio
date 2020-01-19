@@ -1,25 +1,38 @@
 {% extends "app/base.html" %}
 {% block content %}
 
+{%for product in plan_list%}
+<h2>{{product.categories.title}}</h2>
+
+{%endfor%}
+
+
 
 <div class="container">
     <div class="row">
-        {%for product in plan_list%}
+            {%for pro in plan_list%}
+
+
     <div class="col">
         <div class="card">
-            {{product.title}}
-            <img class="card-img"  src="{{ product.image.url }}" style="width: 280px; height:200px;">
-            {{product.place}}
+            {{pro.title}}
+            <img class="card-img"  src="{{ pro.image.url }}" style="width: 280px; height:200px;">
+            {{pro.place}}
         </div>
         </div>
         {%endfor%}
 
+
+
+        <p>hello</p>
+
+        
 </div>
 </div>
+
+
 
 {% endblock %}
-
-
 
 
 

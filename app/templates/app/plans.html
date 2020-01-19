@@ -1,12 +1,12 @@
 {% extends "app/base.html" %}
 {% block content %}
 
-<h2>{{categol.title}}</h2>
+<h2>hello</h2>
 
-
-
-
-
+{%for plant in plans%}
+{{plant.title}}
+<img src="{{plant.image.url}}" style="width: 200px; height: 200px">
+{%endfor%}
 
 {% endblock %}
 

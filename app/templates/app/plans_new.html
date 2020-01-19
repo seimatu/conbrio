@@ -1,0 +1,38 @@
+{% extends "app/base.html" %}
+{% block content %}
+
+<form action="{%url 'app:plans_new' %}" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<table>
+        <tr>
+            <th>タイトル</th>
+            <td>{{form.title}}</td>
+        </tr>
+        <tr>
+            <th>集合場所</th>
+            <td>{{form.place}}</td>
+        </tr>
+        <tr>
+            <th>移動手段</th>
+            <td>{{form.moving_method}}</td>
+        </tr>
+        <tr>
+            <th>第一目的地</th>
+            <td>{{form.second_place}}</td>
+        </tr>
+        <tr>
+            <th>第二目的地</th>
+            <td>{{form.third_place}}</td>
+        </tr>
+        <tr>
+            <th>写真</th>
+            <td>{{form.image}}</td>
+        </tr>
+    
+
+
+
+    </table>
+    <button type="submit" class="btn">save</button>
+</form>
+{%endblock%}
