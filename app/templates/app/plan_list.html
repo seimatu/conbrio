@@ -1,22 +1,21 @@
 {% extends "app/base.html" %}
 {% block content %}
 
-<h4>hello</h4>
-{% if categol %}  
-
-<p>{{categol.title}}</p>
 
 <div class="container">
-{%for product in plan_list%}
+    <div class="row">
+        {%for product in plan_list%}
+    <div class="col">
+        <div class="card">
+            {{product.title}}
+            <img class="card-img"  src="{{ product.image.url }}" style="width: 280px; height:200px;">
+            {{product.place}}
+        </div>
+        </div>
+        {%endfor%}
 
-{{product.title}}
-<img class="card-img"  src="{{ product.image.url }}" style="width: 280px; height:200px;">
-
-
-{{product.place}}
 </div>
-{% endif %}
-{%endfor%}
+</div>
 
 {% endblock %}
 

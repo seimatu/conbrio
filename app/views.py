@@ -1,25 +1,18 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate,login
 from .forms import CustomUserCreationForm
-# from django.views.generic import DetailView
 from .models import Plan,Category
-from django.views.generic import ListView
 
 # Create your views here.
 def index(request):
     return render(request,'app/index.html')
     
 
-def planer(request):
-    planning=get_object_or_404(Plan)
-    categol=get_object_or_404(Category)
+def plan_category(request,pk):
+    planning=get_object_or_404(Plan,pk=pk)
+    categol=get_object_or_404(Category,pk=pk)
 
-    return render(request,'app/date.html',{'planning':planning,'categol':categol})
-
-
-class Date(ListView):
-    model=Plan
-    templates_name='app/date.html'
+    return render(request,'app/plans.html',{'planning':planning,'categol':categol})
 
 
 def signup(request):
@@ -37,3 +30,11 @@ def signup(request):
     else:
         form=CustomUserCreationForm()
     return render(request,'app/signup.html',{'form':form})
+
+
+
+# from django.views.generic import ListView
+
+    # class Date(ListView):
+#     model=Plan
+#     templates_name='app/plan_list.html'
