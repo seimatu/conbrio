@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request,'app/index.html')
 
+
 def plans(request):
     plans=Plan.objects.all().order_by('-created_at')
     return render(request,'app/plans.html',{'plans':plans})
@@ -15,7 +16,7 @@ def plans(request):
 
 def plan_list(request,pk):
     categol=get_object_or_404(Category,pk=pk)
-    planning=categol.plan_set.all().order_by('-creates_at')
+    planning=categol.plan_set.all().order_by('-created_at')
 
     return render(request,'app/plan_list.html',{'planning':planning,'categol':categol})
 
@@ -26,9 +27,10 @@ def signup(request):
         form=CustomUserCreationForm(request.POST)
         if form.is_valid():
             new_user=form.save()
+            input_name=form.cleaned_data['sirname']
             input_email=form.cleaned_data['email']
             input_password=form.cleaned_data['password1']
-            new_user=authenticate(email=input_email,password=input_password)
+            new_user=authenticate(name=input_name,email=input_email,password=input_password)
             if new_user is not None:
                 login(request,new_user)
                 return redirect('app:index')
@@ -44,9 +46,9 @@ def plans_new(request):
         form=PlanForm(request.POST,request.FILES)
         if form.is_valid():
             plan=form.save(commit=False)
-            plan.user=request.user
+            plan.name=request.user
             plan.save()
-        return redirect('app:plan_list',pk=request.plan.pk)
+        return redirect('app:index',pk=request.user.pk)
     else:
         form=PlanForm()
     return render(request,'app/plans_new.html',{'form':form})

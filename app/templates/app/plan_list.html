@@ -1,16 +1,11 @@
 {% extends "app/base.html" %}
 {% block content %}
 
-{%for product in plan_list%}
-<h2>{{product.categories.title}}</h2>
-
-{%endfor%}
-
-
+<h2>{{categol.title}}</h2>
 
 <div class="container">
     <div class="row">
-            {%for pro in plan_list%}
+            {%for pro in planning%}
 
 
     <div class="col">
@@ -21,11 +16,6 @@
         </div>
         </div>
         {%endfor%}
-
-
-
-        <p>hello</p>
-
         
 </div>
 </div>

@@ -68,7 +68,7 @@ h2 {
     padding: 0.2em 0;/*上下の余白*/
     border-top: dotted 5px rgb(167, 133, 110);/*上線*/
     border-bottom: dotted 5px rgb(167, 133, 110);/*下線*/
-    font-size: 60px;
+    font-size: 40px;
   }
 
 .row{
