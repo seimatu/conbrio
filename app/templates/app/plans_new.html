@@ -4,14 +4,15 @@
 
 <h2>あなたのプランは？</h2>
 
-<form class="form-sigin" method="POST">{% csrf_token %}
-
+<form action="{%url 'app:plans_new'%}" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
 
 <div class="container">
 {%crispy form%}
+
 <input style=" color: rgb(167, 133, 110);" type="submit" value="登録する">
 </form>
-
+</div>
 </div>
 
 

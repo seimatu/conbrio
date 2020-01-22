@@ -31,18 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
     'app',
     'django_cleanup',
     'crispy_forms',
 ]
 
+AUTH_USER_MODEL='users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,8 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-AUTH_USER_MODEL='users.User'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=(

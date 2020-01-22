@@ -13,4 +13,4 @@ from .models import Plan
 class PlanForm(ModelForm):
     class Meta:
         model=Plan
-        fields=['title','categories','image','place','moving_method','second_place','third_place','totaltime',]
+        fields=['plan_title','plan_categories','image','place','first_place','second_place','totaltime',]

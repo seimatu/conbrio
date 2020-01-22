@@ -1,28 +1,26 @@
-{% extends "app/base.html" %}
+ {% extends "app/base.html" %}
 {% block content %}
 
-<h2>{{categol.title}}</h2>
 
-<div class="container">
+
+<div class="plans_container">
     <div class="row">
-            {%for pro in planning%}
+        {%for pro in planning%}
+        <div class="plans">
+            <a href="">
+                <img src="{{ pro.image.url }}" style="width: 300px; height:200px;" alt="Card image">
+                <div class="plans_info">
+                    <a href="" class="category">{{ pro.category }}</a>
+                    <a href="">@{{ pro.user }}</a>
+                </div>
 
-
-    <div class="col">
-        <div class="card">
-            {{pro.title}}
-            <img class="card-img"  src="{{ pro.image.url }}" style="width: 280px; height:200px;">
-            {{pro.place}}
-        </div>
+            </a>
         </div>
         {%endfor%}
-        
-</div>
-</div>
+    </div>
+    </div>
+    {% include 'app/all_plans.html'  %}
 
 
 
-{% endblock %}
-
-
-
+{%endblock%}

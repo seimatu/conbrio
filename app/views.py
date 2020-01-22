@@ -2,25 +2,27 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate,login
 from .forms import CustomUserCreationForm,PlanForm
 from .models import Plan,Category
+from users.models import User
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    return render(request,'app/index.html')
+    plan=Plan.objects.all()
+    return render(request,'app/index.html',{'plan':plan})
+
+def user_detail(request):
+    return render(request,'app/user_detail.html')
+
+def all_plans(request,pk):
+    plans=get_object_or_404(User,pk=pk)
+    planic=Plan.objects.all().order_by('-created_at')
+    return render(request,'app/all_plans.html',{'planic':planic,'plans':plans})
 
 
-def plans(request):
-    plans=Plan.objects.all().order_by('-created_at')
-    return render(request,'app/plans.html',{'plans':plans})
-
-
-def plan_list(request,pk):
-    categol=get_object_or_404(Category,pk=pk)
-    planning=categol.plan_set.all().order_by('-created_at')
-
-    return render(request,'app/plan_list.html',{'planning':planning,'categol':categol})
-
-
+def plan_list(request,categories):
+    categories=Category.objects.get(plan_title=categories)
+    planning=Plan.objects.filter(plan_categories=categories).order_by('-created_at')
+    return render(request,'app/plan_list.html',{'planning':planning,'categories':categories})
 
 def signup(request):
     if request.method=='POST':
@@ -34,7 +36,6 @@ def signup(request):
             if new_user is not None:
                 login(request,new_user)
                 return redirect('app:index')
-            
     else:
         form=CustomUserCreationForm()
     return render(request,'app/signup.html',{'form':form})
@@ -46,9 +47,9 @@ def plans_new(request):
         form=PlanForm(request.POST,request.FILES)
         if form.is_valid():
             plan=form.save(commit=False)
-            plan.name=request.user
+            plan.plan_user=request.user
             plan.save()
-        return redirect('app:index',pk=request.user.pk)
+        return redirect('app:all_plans', pk=request.user.pk)
     else:
         form=PlanForm()
     return render(request,'app/plans_new.html',{'form':form})

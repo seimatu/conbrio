@@ -8,8 +8,8 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display_links=('id','title')
 
 class PlanAdmin(admin.ModelAdmin):
-    list_display=('id','title','categories')
-    list_display_links=('id','title')
+    list_display=('id','plan_title','plan_categories')
+    list_display_links=('id','plan_title')
 
 
 admin.site.register(Category,CategoryAdmin)
