@@ -4,9 +4,15 @@ from users.models import User
 # Create your models here.
 class Category(models.Model):
     title=models.CharField(max_length=100,unique=True)
-    # primaryCategory=models.BooleanField(default=False)
     def __str__(self):
         return self.title
+
+class City(models.Model):
+    name=models.CharField(max_length=30)
+    slug=models.SlugField()
+    def __str__(self):
+        return self.name
+    
 
 class Plan(models.Model):
     plan_title=models.CharField(max_length=200)
@@ -19,6 +25,7 @@ class Plan(models.Model):
     image=models.ImageField(upload_to='photos/')
     plan_categories=models.ForeignKey('Category',on_delete=models.PROTECT)
     plan_user=models.ForeignKey("users.User",on_delete=models.CASCADE)
+    city_name=models.ForeignKey("app.City",on_delete=models.CASCADE)
 
     def __str__(self):
         return self.plan_title

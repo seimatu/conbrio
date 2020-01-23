@@ -8,9 +8,23 @@
 </div>
 
 {%for plan in planning%}
+<div class="container-list"></div>
+<div class="col-sm-12 col-md-5 col-lg-5">    </div>        
+            <div class="col-sm-12 col-md-5 col-lg-5">
+                <div class="media">
+                    <img class="d-flex mr-3" data-src="holder.js/64x64?theme=sky" alt="100x100" src="{{plan.image.url}}" data-holder-rendered="true" style="width: 100px; height: 100px;">
+                    <div class="media-body">
+                        <h3 class="mt-0">{{plan.plan_title}}</h3>
+                    </div>
+                </div>
+            </div>
+            
+        
+                        {%endfor%}
 
-<img src="{{plan.image.url}}" class="plan-img" style="height: 300px;width:300px;">
-{%endfor%}
+
+      
+
 
 
 {%endblock%}

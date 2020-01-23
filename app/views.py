@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate,login
 from .forms import CustomUserCreationForm,PlanForm
-from .models import Plan,Category
+from .models import Plan,Category,City
 from users.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -16,6 +16,7 @@ def detail(request):
 
 def all_plans(request,pk):
     plans=get_object_or_404(User,pk=pk)
+    city=get_object_or_404(City,pk=pk)
     planic=Plan.objects.all().order_by('-created_at')
     return render(request,'app/all_plans.html',{'planic':planic,'plans':plans})
 
