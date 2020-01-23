@@ -1,8 +1,6 @@
 {% extends "app/base.html" %}
 {% block content %}
   
-
-
 <div>
 {%if plan_categories%}
 <h2>{{plan_categories.title}}</h2>
@@ -10,6 +8,7 @@
 </div>
 
 {%for plan in planning%}
+
 <img src="{{plan.image.url}}" class="plan-img" style="height: 300px;width:300px;">
 {%endfor%}
 

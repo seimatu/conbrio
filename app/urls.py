@@ -6,7 +6,7 @@ app_name='app'
 
 urlpatterns = [
     path('',views.index,name='index'),
-    path('user_detail/',views.user_detail,name='user_detail'),
+    path('detail/',views.detail,name='detail'),
     path('all_plans/<int:pk>/',views.all_plans,name='all_plans'),
     path('plans/new/',views.plans_new,name='plans_new'),
     path('plan_list/<str:plan_categories>/',views.plan_list,name='plan_list'),

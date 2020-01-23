@@ -3,15 +3,16 @@ from django.contrib.auth import authenticate,login
 from .forms import CustomUserCreationForm,PlanForm
 from .models import Plan,Category
 from users.models import User
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    plan=Plan.objects.all()
-    return render(request,'app/index.html',{'plan':plan})
+    return render(request,'app/index.html')
 
-def user_detail(request):
-    return render(request,'app/user_detail.html')
+def detail(request):
+    plang=Plan.objects.all()
+    return render(request,'app/detail.html',{'plang':plang})
 
 def all_plans(request,pk):
     plans=get_object_or_404(User,pk=pk)
@@ -48,6 +49,7 @@ def plans_new(request):
             plan=form.save(commit=False)
             plan.plan_user=request.user
             plan.save()
+            messages.success(request, "投稿が完了しました!")
         return redirect('app:all_plans', pk=request.user.pk)
     else:
         form=PlanForm()

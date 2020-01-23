@@ -25,11 +25,16 @@
         <div class="col-sm-1 col-md-2 col-lg-2" ></div>
 
     <div class="col-sm-6 col-md-4 col-lg-4" style="padding-top: 10px;" >
+      <a href="https://twitter.com/">
        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/">
        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://www.instagram.com/?hl=ja">
        <i class="fab fa-instagram"></i>
       </div>
-
+    </a>
       {% if request.user.is_authenticated %}  
         <h5 class="nav-item dropdown" style="margin-top: -20px; color:rgb(167, 133, 110);">
             <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,8 +60,12 @@
 </div>
 </div>
 
-{% block content %}
-{% endblock %}
+
+
+    {% for message in messages %}
+    <p class="alert alert-success" role="alert">{{ message }}</p> 
+    {% endfor %}
+        {% block content %}{% endblock %}
 
 
 <a href="/" style="text-align: center;"><h6>Conbrio</h6></a>
