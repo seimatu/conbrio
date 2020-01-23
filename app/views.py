@@ -18,11 +18,10 @@ def all_plans(request,pk):
     planic=Plan.objects.all().order_by('-created_at')
     return render(request,'app/all_plans.html',{'planic':planic,'plans':plans})
 
-
-def plan_list(request,categories):
-    categories=Category.objects.get(plan_title=categories)
-    planning=Plan.objects.filter(plan_categories=categories).order_by('-created_at')
-    return render(request,'app/plan_list.html',{'planning':planning,'categories':categories})
+def plan_list(request,plan_categories):
+    plan_categories=Category.objects.get(title=plan_categories)
+    planning=Plan.objects.filter(plan_categories=plan_categories).order_by('-created_at')
+    return render(request,'app/plan_list.html',{'planning':planning,'plan_categories':plan_categories})
 
 def signup(request):
     if request.method=='POST':

@@ -18,7 +18,7 @@ class Plan(models.Model):
     created_at=models.DateTimeField(auto_now=True)
     image=models.ImageField(upload_to='photos/')
     plan_categories=models.ForeignKey('Category',on_delete=models.PROTECT)
-    plan_user=models.ForeignKey("user.User",on_delete=models.CASCADE)
+    plan_user=models.ForeignKey("users.User",on_delete=models.CASCADE)
 
     def __str__(self):
         return self.plan_title

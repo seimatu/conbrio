@@ -1,4 +1,6 @@
-
+{% extends "app/base.html" %}
+{% block content %}
+  
 <h2>all_plan=planic</h2>
 
 {%for plan in planic%}
@@ -6,4 +8,4 @@
 <img src="{{plan.image.url}}" class="plan-img" style="height: 300px;width:300px;">
 {%endfor%}
 
-  
+{%endblock%}

@@ -1,7 +1,14 @@
 {% extends "app/base.html" %}
 {% block content %}
+  
+<div>
 
-{% include 'app/all_plans.html'  %}
+{%if plan_categories%}
+<h3>{{plan_categories.title}}</h3>
 
 
-{% endblock %}
+{%endif%}
+
+</div>
+
+{%endblock%}
