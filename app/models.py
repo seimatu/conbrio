@@ -23,7 +23,7 @@ class Plan(models.Model):
     totaltime=models.IntegerField(default=10)
     created_at=models.DateTimeField(auto_now=True)
     image=models.ImageField(upload_to='photos/')
-    city_name=models.ForeignKey("app.City",on_delete=models.CASCADE)
+    city_name=models.ForeignKey("City",on_delete=models.PROTECT)
     plan_categories=models.ForeignKey('Category',on_delete=models.PROTECT)
     plan_user=models.ForeignKey("users.User",on_delete=models.CASCADE)
 
