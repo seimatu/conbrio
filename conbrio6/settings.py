@@ -25,7 +25,7 @@ SECRET_KEY = '*ume==!q&witqcss564+rz97eiw45pohm(kt7(m7l(gyo*z%l1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['conbriosix.herokuapp.com']
 
 
 # Application definition
