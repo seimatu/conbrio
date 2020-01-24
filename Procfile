@@ -1,0 +1,1 @@
+web: gunicorn conbrio6.wsgi
