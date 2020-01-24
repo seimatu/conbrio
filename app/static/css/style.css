@@ -183,4 +183,9 @@ h3{
 .container-list{
     display: inline-block;
 }
-
+p{
+    color:rgb(167, 133, 110);
+    padding:0px;
+    margin:0px;
+    display: inline-block;
+}

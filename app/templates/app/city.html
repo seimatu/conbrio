@@ -1,0 +1,18 @@
+{% extends "app/base.html" %}
+{% block content %}
+
+<div>
+{%if city_name%}
+<h2>{{city_name.name}}</h2>
+{%endif%}
+</div>
+
+{%for p in planic%}
+<p>{{p.first_place}}</p>
+
+
+
+
+{%endfor%}
+  
+{% endblock %}

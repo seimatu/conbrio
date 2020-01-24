@@ -14,11 +14,10 @@ def detail(request):
     plang=Plan.objects.all()
     return render(request,'app/detail.html',{'plang':plang})
 
-def all_plans(request,pk):
-    plans=get_object_or_404(User,pk=pk)
-    city=get_object_or_404(City,pk=pk)
-    planic=Plan.objects.all().order_by('-created_at')
-    return render(request,'app/all_plans.html',{'planic':planic,'plans':plans})
+def city(request,city_name):
+    city_name=City.objects.get(slug=city_name)
+    planic=Plan.objects.filter(city_name=city_name).order_by('-created_at')
+    return render(request,'app/city.html',{'planic':planic,'city_name':city_name})
 
 def plan_list(request,plan_categories):
     plan_categories=Category.objects.get(title=plan_categories)
@@ -51,7 +50,7 @@ def plans_new(request):
             plan.plan_user=request.user
             plan.save()
             messages.success(request, "投稿が完了しました!")
-        return redirect('app:all_plans', pk=request.user.pk)
+        return redirect('app:index')
     else:
         form=PlanForm()
     return render(request,'app/plans_new.html',{'form':form})
