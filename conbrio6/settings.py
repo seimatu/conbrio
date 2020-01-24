@@ -82,8 +82,11 @@ WSGI_APPLICATION = 'conbrio6.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroku_1d473579b13d2a8',
+        'USER' : 'b463c705ce35c8',
+        'PASSWORD' : 'd04f0066',
+        'PORT' : '3306',
     }
 }
 
