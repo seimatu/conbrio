@@ -15,14 +15,12 @@ gitignore==0.0.8
 gunicorn==20.0.4
 heroku==0.1.4
 HTMLParser==0.0.2
-idna==2.8
-mysqlclient==2.0.0.dev1
+idna==
 numpy==1.18.1
 oauthlib==3.1.0
 pandas==0.25.3
 Pillow==7.0.0
 pipenv==2018.11.26
-PyMySQL==0.9.3
 python-dateutil==2.8.1
 python3-openid==3.1.0
 pytz==2019.3
@@ -36,3 +34,5 @@ urllib3==1.25.7
 virtualenv==16.7.9
 virtualenv-clone==0.5.3
 whitenoise==5.0.1
+mysqlclient==1.4.5
+
