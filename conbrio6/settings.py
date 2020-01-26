@@ -86,9 +86,12 @@ DATABASES = {
         'NAME': 'heroku_1d473579b13d2a8',
         'USER' : 'b463c705ce35c8',
         'PASSWORD' : 'd04f0066',
+        'HOST' : 'us-cdbr-iron-east-05.cleardb.net'
         'PORT' : '3306',
     }
 }
+
+mysql://b463c705ce35c8:d04f0066@us-cdbr-iron-east-05.cleardb.net/heroku_1d473579b13d2a8?reconnect=true
 
 
 # Password validation
