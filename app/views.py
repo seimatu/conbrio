@@ -21,7 +21,7 @@ def city(request,city_name):
 
 def plan_list(request,plan_categories):
     plan_categories=Category.objects.filter(title=plan_categories)
-    planning=Plan.objects.filter(plan_categories=plan_categories[0]).order_by('-created_at')
+    planning=Plan.objects.filter(plan_categories=plan_categories).order_by('-created_at')
     return render(request,'app/plan_list.html',{'planning':planning,'plan_categories':plan_categories})
 
 def signup(request):
