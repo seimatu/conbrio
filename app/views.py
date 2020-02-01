@@ -20,7 +20,7 @@ def city(request,city_name):
     return render(request,'app/city.html',{'planic':planic,'city_name':city_name})
 
 def plan_list(request,plan_categories):
-    plan_categories=Category.objects.get(title=plan_categories)
+    plan_categories=Category.objects.get(title=plan_categories)[0]
     planning=Plan.objects.filter(plan_categories=plan_categories).order_by('-created_at')
     return render(request,'app/plan_list.html',{'planning':planning,'plan_categories':plan_categories})
 
