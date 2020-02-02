@@ -53,13 +53,13 @@
 
     <div class="col-md-7 col-lg-7 d-none d-md-block" style="padding-top: 10px; margin:0px;" >
       <a href="https://twitter.com/">
-       <i class="fab fa-twitter" style="padding:0px;"></i>
+       <i class="fab fa-twitter"></i>
       </a>
       <a href="https://www.facebook.com/">
-       <i class="fab fa-facebook-square" style="padding:0px;"></i>
+       <i class="fab fa-facebook-square"></i>
       </a>
       <a href="https://www.instagram.com/?hl=ja">
-       <i class="fab fa-instagram" style="padding:0px;"></i>
+       <i class="fab fa-instagram"></i>
     </a>
     
       {% if request.user.is_authenticated %}  
@@ -76,7 +76,7 @@
             </div>
           </h5>
       {% else %}
-        <h5 class="nav-item">
+        <h5 class="nav-item" style="padding: 0px; margin:0px;">
             <a href="{%url 'app:login'%}" style="color: rgb(167, 133, 110); font-size: 20px; padding-left: 70px;">login</a>
             <a href="{%url 'app:signup'%}" style="color: rgb(167, 133, 110); font-size: 20px; padding-left: 20px;">signup</a>
        </h5>
