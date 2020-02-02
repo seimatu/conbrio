@@ -18,13 +18,13 @@
 
   <div class="container-header">
     <div class="row">
-        <div class="col-xs-12 col-sm-9 col-md-4 col-lg-4">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <a href="{%url 'app:index'%}"><h1>Conbrio</h1></a>
         </div>
 
-        <div class="col-xs-2 col-md-2 col-lg-2" ></div>
+        <div class="col-sm-1 col-md-2 col-lg-2" ></div>
 
-    <div class="col-xs-1 col-sm-1 col-md-4 col-lg-4" style="padding-top: 10px;" >
+    <div class="col-sm-6 col-md-4 col-lg-4" style="padding-top: 10px;" >
       <a href="https://twitter.com/">
        <i class="fab fa-twitter"></i>
       </a>
@@ -38,6 +38,7 @@
       {% if request.user.is_authenticated %}  
         <h5 class="nav-item dropdown" style="margin-top: -20px; color:rgb(167, 133, 110);">
             <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="col-sm-6" >
                 <i class="fas fa-user-circle" style="font-size: 50px; padding-left: 50px;"></i>
                 {%if plans in plan %}
                 <p>{{plans.user.pk}}</p>
@@ -55,6 +56,7 @@
        </h5>
       {% endif %}
         </div>
+      </div>
     </div>
   </div>
 </div>
