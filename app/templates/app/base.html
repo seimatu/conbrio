@@ -38,7 +38,6 @@
       {% if request.user.is_authenticated %}  
         <h5 class="nav-item dropdown" style="margin-top: -20px; color:rgb(167, 133, 110);">
             <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="col-sm-10" >
                 <i class="fas fa-user-circle" style="font-size: 50px; padding-left: 50px;"></i>
                 {%if plans in plan %}
                 <p>{{plans.user.pk}}</p>
@@ -55,7 +54,6 @@
             <a href="{%url 'app:signup'%}" style="color: rgb(167, 133, 110); font-size: 20px; padding-left: 20px;">signup</a>
        </h5>
       {% endif %}
-        </div>
       </div>
     </div>
   </div>
