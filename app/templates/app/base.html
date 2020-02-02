@@ -20,6 +20,29 @@
     <div class="row">
         <div class="col-sm-1 col-md-4 col-lg-4 d-none d-md-block">
           <a href="{%url 'app:index'%}"><h1>Conbrio</h1></a>
+
+          {% if request.user.is_authenticated %}  
+          <h5 class="nav-item dropdown" style="margin-top: -20px; color:rgb(167, 133, 110);">
+              <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user-circle" style="font-size: 50px; padding-left: 50px;"></i>
+                  {%if plans in plan %}
+                  <p>{{plans.user.pk}}</p>
+                  {%endif%}
+                </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:rgb(167, 133, 110);">
+                <a class="dropdown-item" href="{%url 'app:plans_new'%}">Post</a>
+                <a class="dropdown-item" href="{%url 'app:logout' %}">Logout</a>
+              </div>
+            </h5>
+        {% else %}
+          <h5 class="nav-item">
+              <a href="{%url 'app:login'%}" style="color: rgb(167, 133, 110); font-size: 20px; padding-left: 70px;">login</a>
+              <a href="{%url 'app:signup'%}" style="color: rgb(167, 133, 110); font-size: 20px; padding-left: 20px;">signup</a>
+         </h5>
+        {% endif %}
+        </div>
+      </div>
+    </div>
         </div>
 
         <div class="col-md-2 col-lg-2 d-none d-md-block"></div>
@@ -36,10 +59,7 @@
       </div>
     </a>
 
-    <div class="col-sm-1 col-md-4 col-lg-4 d-none d-md-block">
-        <a href="{%url 'app:index'%}"><h1>Conbrio</h1></a>
-      
-
+    
       {% if request.user.is_authenticated %}  
         <h5 class="nav-item dropdown" style="margin-top: -20px; color:rgb(167, 133, 110);">
             <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,7 +82,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 </div>
 
