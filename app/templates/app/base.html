@@ -50,8 +50,6 @@
             <a href="{%url 'app:index'%}"><h1>Conbrio</h1></a>
         </div>
 
-        <div class="col-md-2 col-lg-2 d-none d-md-block"></div>
-
     <div class="col-md-7 col-lg-7 d-none d-md-block" style="padding:10px 0px 0px 0px; margin: 0px 0px 0px 0px;" >
       <a href="https://twitter.com/">
        <i class="fab fa-twitter"></i>
@@ -66,7 +64,7 @@
   
     
       {% if request.user.is_authenticated %}  
-        <h5 class="nav-item dropdown" style="margin: 0px 0px 0px 0px; padding: 0px 0px 50px 1200px; color:rgb(167, 133, 110); display: inline-block;">
+        <h5 class="nav-item dropdown" style="margin: 0px 0px 0px 0px; padding: -70px 0px 50px 1200px; color:rgb(167, 133, 110); display: inline-block;">
             <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user-circle" style="font-size: 50px; "></i>
                 {%if plans in plan %}
