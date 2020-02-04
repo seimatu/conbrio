@@ -202,7 +202,7 @@
 <!------------------------スマホsm画面-------------------------------->
 
         <div class="container-fluid">
-            <div class="row justify-content-center ">
+            <div class="row justify-content-around ">
               <a href="{% url 'app:city' city_name='sinjuku' %}">
                 <div class="d-md-none ">
                   <div class="card-city">
@@ -214,10 +214,9 @@
                   </div>
               </div>
               
-              <div class="col-sm-1"></div>
-
+              
               <a href="{% url 'app:city' city_name='sibuya' %}">
-                <div class="d-md-none" >
+                <div class="d-md-none" style="margin-right: 10px;">
                   <div class="card-city">
                     <img class="card-img-top" src="https://www.tokyo-date.net/machi_shibuya3/images/53.jpg" alt="Card-image-cap" style="width: 200px; height:150px; border-radius: 20px;">
                     <div class="card-img-overlay">
@@ -321,6 +320,13 @@
                 </div>
               </a>
         </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
 
               <a href="">
                 <div class="col-sm-12 col-md-3 col-lg-3" >
