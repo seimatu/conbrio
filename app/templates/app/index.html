@@ -201,7 +201,7 @@
 
 <!------------------------スマホsm画面-------------------------------->
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row ">
               <a href="{% url 'app:city' city_name='sinjuku' %}">
                 <div class="d-md-none align-self-center">
@@ -225,7 +225,9 @@
                   </div>
               </div>
             </div>
-              
+          </div>
+
+          <div class="container">
             <div class="row">
               <a href="{% url 'app:city' city_name='ikebukuro' %}">
                 <div class="col-sm-1 d-md-none" >
@@ -251,7 +253,7 @@
                           </div>
                         </div>
 
-                  <div class="container-fluid">
+                  <div class="container">
                       <div class="row">
                       <a href="{% url 'app:city' city_name='ebisu' %}">
                         <div class="col-sm-1 d-md-none">
@@ -275,6 +277,7 @@
                           </div>
                       </div>
                     </div>
+                  </div>
                 
                     <a href="{% url 'app:city' city_name='yokohama' %}">
                       <div class="col-sm-1 d-md-none">
