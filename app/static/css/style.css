@@ -142,7 +142,7 @@ label{
     -webkit-text-stroke: 1px rgb(167, 133, 110);
     font-size: 30px;
     text-align: center;
-    padding: 0px 0px 0px 20px;
+    padding: 0px 0px 0px 0px;
 }
 h6{
     text-align: center; 
