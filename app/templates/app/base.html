@@ -74,8 +74,9 @@
                 {%endif%}
               </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:rgb(167, 133, 110);">
-              <p>{{plan.plan_user}}</p>
-              <a class="dropdown-item" href="{%url 'app:plans_new'%}">Post</a>
+                {%if plans in plan %}
+                <p>{{plans.plan_user}}</p>
+                {%endif%}              <a class="dropdown-item" href="{%url 'app:plans_new'%}">Post</a>
               <a class="dropdown-item" href="{%url 'app:logout' %}">Logout</a>
             </div>
           </h5>
