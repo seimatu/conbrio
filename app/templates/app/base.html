@@ -70,13 +70,11 @@
             <a  href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user-circle" style="font-size: 50px; "></i>
                 {%if plans in plan %}
-                <p>{{plans.user.pk}}</p>
+                <p>{{plans.plan_user}}</p>
                 {%endif%}
               </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:rgb(167, 133, 110);">
-                {%if plans in plan %}
-                <p>{{plans.plan_user}}</p>
-                {%endif%}              <a class="dropdown-item" href="{%url 'app:plans_new'%}">Post</a>
+              <a class="dropdown-item" href="{%url 'app:plans_new'%}">Post</a>
               <a class="dropdown-item" href="{%url 'app:logout' %}">Logout</a>
             </div>
           </h5>
