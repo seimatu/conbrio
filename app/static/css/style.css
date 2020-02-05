@@ -78,7 +78,7 @@ h2 {
 
 .col{
     text-align: center;
-    margin: auto;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -99,7 +99,7 @@ h2 {
     display: inline-block;
     height: 0px;
     width:10px;
-    margin-right: 70px;
+    margin-right: 150px;
 }
 .search-title{
     text-align: center; 
