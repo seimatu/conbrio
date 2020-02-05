@@ -7,19 +7,19 @@
     <div class="row">
             <div class="col-sm-6 col-md-12 col-lg-12">
                 <form method="POST" action="{%url 'app:signup' %}" style=" color: rgb(167, 133, 110); ">{% csrf_token %}
-                    <label>name</label>
+                    <label>名前</label>
                     {{form.sirname}}
                     {{form.sirname.errors}}
                     <br>
-                    <label>meiladdress</label>
+                    <label>メールアドレス</label>
                     {{form.email}}
                     {{form.email.errors}}
                     <br>
-                    <label>password</label>
+                    <label>パスワード</label>
                     {{form.password1}}
                     {{form.password1.errors}}
                     <br>
-                    <label>password(確認用)</label>
+                    <label>パスワード(確認用)</label>
                     {{form.password2}}
                     {{form.password2.errors}}
                     <br>
