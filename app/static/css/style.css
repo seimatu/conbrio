@@ -99,7 +99,7 @@ h2 {
     display: inline-block;
     height: 0px;
     width:10px;
-    margin-right: 220px;
+    margin-right: 50px;
 }
 .search-title{
     text-align: center; 
@@ -142,7 +142,7 @@ label{
     -webkit-text-stroke: 1px rgb(167, 133, 110);
     font-size: 30px;
     text-align: center;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 50px 0px 0px;
 }
 h6{
     text-align: center; 
