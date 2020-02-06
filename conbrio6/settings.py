@@ -150,9 +150,7 @@ LOGOUT_REDIRECT_URL = 'app:index'
 
 
 #cloudinaryの情報
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+
 
 CLOUDINARY_STORAGE = {
 'CLOUD_NAME': 'dipmdbt0k',
