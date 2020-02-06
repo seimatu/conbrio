@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -152,6 +150,10 @@ LOGOUT_REDIRECT_URL = 'app:index'
 
 
 #cloudinaryの情報
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 CLOUDINARY_STORAGE = {
 'CLOUD_NAME': 'dipmdbt0k',
 'API_KEY': '973193941785473',
