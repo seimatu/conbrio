@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -150,7 +154,8 @@ LOGOUT_REDIRECT_URL = 'app:index'
 
 #cloudinaryの情報
 CLOUDINARY_STORAGE = {
-'CLOUD_NAME': 'your_cloud_name',
-'API_KEY': 'your_api_key',
-'API_SECRET': 'your_api_secret'
+'CLOUD_NAME': 'dipmdbt0k',
+'API_KEY': '973193941785473',
+'API_SECRET': 'YriyeIagI0Ec9hVZMcmPqAXH6o4'
 }
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
