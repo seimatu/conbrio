@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'app',
     'django_cleanup',
     'crispy_forms',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 AUTH_USER_MODEL='users.User'
@@ -140,7 +142,15 @@ STATICFILES_DIRS=[
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='/media/'
 
-
+#サインアップの情報
 LOGIN_URL = 'app:login'
 LOGIN_REDIRECT_URL = 'app:index'
 LOGOUT_REDIRECT_URL = 'app:index'
+
+
+#cloudinaryの情報
+CLOUDINARY_STORAGE = {
+'CLOUD_NAME': 'your_cloud_name',
+'API_KEY': 'your_api_key',
+'API_SECRET': 'your_api_secret'
+}
