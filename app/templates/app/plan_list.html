@@ -1,6 +1,7 @@
 {% extends "app/base.html" %}
 {% block content %}
-  
+{% load cloudinary %}
+
 <div>
 {%if plan_categories%}
 <h2>{{plan_categories.title}}</h2>
